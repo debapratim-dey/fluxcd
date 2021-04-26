@@ -6,6 +6,6 @@ app.config["DEBUG"] = True
 
 @app.route('/', methods=['GET'])
 def home():
-    return "<h1>My first helm update</h1><p>This is an updated api-response.</p>"
+    return "<h1>My first flux-cd trial</h1><p>This is an updated image.</p>"
 
 app.run()

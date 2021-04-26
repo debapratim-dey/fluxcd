@@ -14,3 +14,5 @@ helm upgrade -i helm-operator fluxcd/helm-operator --wait \
 --set helm.versions=v3
 
 kubectl delete -f https://raw.githubusercontent.com/fluxcd/helm-operator/1.2.0/deploy/crds.yaml
+
+docker image build -t deb0pratim/dummy_flask_app:1.0 .
