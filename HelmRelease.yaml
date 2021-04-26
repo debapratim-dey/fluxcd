@@ -8,7 +8,7 @@ metadata:
 spec:
   releaseName: fluxcd-demo
   forceUpgrade: true
-  timeout: 300
+  timeout: 3600
   wait: true
   maxHistory: 10
   git:
