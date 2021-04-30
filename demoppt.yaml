@@ -1,0 +1,24 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: fluxcd-demo
+  namespace: demoppt
+  annotations:
+    fluxcd.io/automated: "true"
+spec:
+  releaseName: fluxcd-demo
+  forceUpgrade: true
+  timeout: 3600
+  wait: true
+  maxHistory: 10
+  git:
+    timeout: 300s
+  chart:
+    git: git@github.com:debapratim-dey/fluxcd
+    ref: master
+    path: api-chart/
+  values:
+    image:
+      repository: deb0pratim/dummy_flask_app
+      tag: "1.3"
